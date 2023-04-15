@@ -20,8 +20,8 @@ This is a solution to the [Calculator app challenge on Frontend Mentor](https://
 
 ### Links
 
-- Solution URL: [URL](https://your-solution-url.com)
-- Live Site URL: [URL](https://your-live-site-url.com)
+- Solution URL: [URL](https://www.frontendmentor.io/solutions/just-a-calculator-2Y3y4FjfsC)
+- Live Site URL: [URL](https://unl00ky.github.io/calculator-app/)
 
 ## My process
 
