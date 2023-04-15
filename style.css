@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'League Spartan', sans-serif;
+    transition: all 500ms ease;
+}
+
+:root {
+    /* Theme 1
+
+    /* Backgrounds */
+
+    --main-background: hsl(222, 26%, 31%);
+    --toggle-background-keypad-background: hsl(223, 31%, 20%);
+    --screen-background: hsl(224, 36%, 15%);
+
+    /* Keys */
+
+    --key-background: hsl(225, 21%, 49%);
+    --key-background-hover: hsl(224, 77%, 75%);
+    --key-shadow: hsl(224, 28%, 35%);
+    --previous-calc: lightslategray;
+
+    --Red-key-background-toggle: hsl(6, 63%, 50%);
+    --Red-key-background-toggle-hover: hsl(6, 68%, 59%);
+    --Dark-red-key-shadow: hsl(6, 70%, 34%);
+
+    --Light-grayish-orange-key-background: hsl(30, 25%, 89%);
+    --Grayish-orange-key-shadow: hsl(28, 16%, 65%);
+
+    /* Text */
+
+    --Very-dark-grayish-blue: hsl(221, 14%, 31%);
+    --White: hsl(0, 0%, 100%);
+
+    --top-section: hsl(0, 0%, 100%);
+    --buttons-background: hsl(0, 0%, 100%);
+}
+
+
+body {
+    min-height: 100vh;
+    /* background-color: rgb(19, 19, 19); */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-background);
+}
+
+main {
+    width: 330px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 1.5rem;
+}
+.theme-number {
+    letter-spacing: 0.3rem;
+    text-align: right;
+    font-size: 1rem;
+    color: var(--top-section);
+    margin-right: 10px;
+}
+.navbar {
+    color: var(--top-section);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5rem;
+}
+.slider-part {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slider-part .theme {
+    font-size: 1rem;
+}
+.slider-styles {
+    display: flex;
+    align-items: center;
+    margin-left: 1.5rem;
+    padding: 0.5rem;
+    width: 5rem;
+    height: 1.7rem;
+    border-radius: 1rem;
+    background-color: var(--toggle-background-keypad-background);
+}
+.circle-styles {
+    position: relative;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    background-color: var(--Red-key-background-toggle);
+    transition: all 500ms ease;
+}
+.first-action {
+    left: 0;
+}
+.second-action {
+    left: 35%;
+}
+.third-action {
+    left: 70%;
+}
+.circle-styles:hover {
+    transition: all 500ms ease;
+    cursor: pointer;
+    background-color: var(--Dark-red-key-shadow);
+}
+.display {
+    font-size: 2.5rem;
+    background-color: var(--screen-background);
+    color: var(--White);
+    border: none;
+    padding: 1rem 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 10px;
+    text-align: right;
+    white-space: normal;
+    word-wrap: break-word;
+}
+.previous-calc {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: var(--previous-calc);
+}
+.current-calc {
+    color: var(--top-section);
+}
+button {
+    width: 100%;
+    height: 4rem;
+    border: none;
+    font-size: 2rem;
+    color: var(--Very-dark-grayish-blue);
+    background-color: var(--Light-grayish-orange-key-background);
+    box-shadow: 0 5px 0 var(--Grayish-orange-key-shadow);
+    border-radius: 10px;
+    user-select: none;
+    transition: all 200ms ease;
+}
+button:hover {
+    transition: all 200ms ease;
+    cursor: pointer;
+    background-color: var(--buttons-background);
+}
+.calculator {
+    background-color: var(--toggle-background-keypad-background);
+    border-radius: 10px;
+    padding: 1.5rem;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem 10px;
+}
+.long-button {
+    width: 100%;
+    grid-column: span 2;
+}
+#delete {
+    background-color: var(--key-background);
+    box-shadow: 0 5px 0 var(--key-shadow);
+    color: var(--White);
+    font-size: 1.2rem;
+}
+#delete:hover, #reset:hover{
+    background-color: var(--key-background-hover);
+}
+#reset {
+    background-color: var(--key-background);
+    box-shadow: 0 5px 0 var(--key-shadow);
+    color: var(--White);
+    font-size: 1.2rem;
+}
+#equal:hover {
+    background-color: var(--Red-key-background-toggle-hover);
+}
+#equal {
+    background-color: var(--Red-key-background-toggle);
+    box-shadow: 0 5px 0 var(--Dark-red-key-shadow);
+    color: var(--White);
+    font-size: 1.2rem;
+}
